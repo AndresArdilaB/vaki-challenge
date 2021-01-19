@@ -1,5 +1,6 @@
 .reward_container {
   width: 305px;
+  margin-bottom: 5px;
 }
 
 .reward_header {
@@ -19,4 +20,10 @@
   box-shadow: none;
   color: #7ed321;
   width: 100%;
+}
+
+@media (min-width: 420px) {
+  .reward_container {
+    width: 305px;
+  }
 }

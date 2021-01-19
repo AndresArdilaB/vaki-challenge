@@ -17,7 +17,7 @@ h1 {
 .total_container {
   margin-top: 20px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   width: 100%;
   font-size: 16px;
@@ -34,4 +34,20 @@ h1 {
   align-items: center;
   min-width: 112px;
   min-height: 36px;
+}
+
+@media (min-width: 420px) {
+  .total_container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+  
+    button {
+      color: #fff;
+      margin-left: 20px;
+    }
+  }
 }

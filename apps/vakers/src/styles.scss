@@ -52,5 +52,11 @@ body {
 }
 
 .container{
-  width: 1030px !important;
+  width: 100% !important;
+}
+
+@media (min-width: 420px) {
+  .container{
+    width: 1030px !important;
+  }
 }
