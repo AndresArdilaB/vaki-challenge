@@ -5,13 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyA4qfQfsx-nHT6wQWnx_gYkLsJ9sVhjSrM",
-    authDomain: "vakers-37e37.firebaseapp.com",
-    projectId: "vakers-37e37",
-    storageBucket: "vakers-37e37.appspot.com",
-    messagingSenderId: "300123849815",
-    appId: "1:300123849815:web:c0fd940c3c4daf22ac0f12",
-    measurementId: "G-MTHFDMF31Y"
+    
   }
 };
 
