@@ -1,0 +1,80 @@
+<div class="container">
+  <mat-card class="vaki_detail_container">
+    <div class="vaki_detail_image">
+      <img [src]="vaki.photo" alt="">
+    </div>
+    <div class="vaki_detail_info">
+      <div class="vaki_name">
+        {{vaki.name}}
+      </div>
+      <div class="more_info">
+        Ver info
+      </div>
+      <div class="progress_text_container row between-xs middle-xs header-row">
+        <div>
+          {{vaki.close_date| daysToEnd}} dias antes del cierre {{vaki.close_date | dateFormat}}
+        </div>
+        <div>
+          47% de la meta
+        </div>
+      </div>
+      <mat-progress-bar mode="determinate" value="47"></mat-progress-bar>
+      <div class="goal_container row between-xs middle-xs header-row">
+        <div>Meta</div> COP {{300000000 | currency}}
+      </div>
+      <div class="collected_vakers row between-xs middle-xs header-row">
+        <div>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary">
+            trending_up
+          </mat-icon>
+          COP {{995875 | currency}}
+          <div class="collected_vakers_normal_text margin-left">
+            Recaudado
+          </div>
+        </div>
+        <div class="vakers_number_container">
+          {{1235 | number}}
+          <div class="collected_vakers_normal_text">
+            Vakers
+          </div>
+        </div>
+      </div>
+      <div class="contribute_container">
+        <select class="contribute_select_money">
+          <option value="USD">USD</option>
+        </select>
+
+        <input class="contribute_amount" placeholder="3.000">
+
+        <button mat-raised-button class="contribute_button" color="primary">
+          APORTAR
+        </button>
+      </div>
+
+      <div>
+        <button mat-raised-button class="view_reward">
+          VER RECOMPENSAS
+        </button>
+      </div>
+
+      <div class="chips_container row between-xs middle-xs header-row">
+        <mat-chip-list>
+          <mat-chip class="vaki_chip">Impacto</mat-chip>
+          <mat-chip class="vaki_chip">Informacion</mat-chip>
+          <mat-chip class="vaki_chip">Independencia</mat-chip>
+        </mat-chip-list>
+
+        <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary">share</mat-icon>
+      </div>
+
+      <!-- <div>
+        {{vaki.description}}
+      </div>
+      <div>
+        {{vaki.summary}}
+      </div> -->
+    </div>
+  </mat-card>
+
+  <vaki-challenge-rewards [vaki_id]="vaki.id"></vaki-challenge-rewards>
+</div>

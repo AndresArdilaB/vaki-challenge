@@ -16,8 +16,14 @@
             "polyfills": "apps/vakers/src/polyfills.ts",
             "tsConfig": "apps/vakers/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/vakers/src/favicon.ico", "apps/vakers/src/assets"],
-            "styles": ["apps/vakers/src/styles.scss"],
+            "assets": [
+              "apps/vakers/src/favicon.ico",
+              "apps/vakers/src/assets"
+            ],
+            "styles": [
+              "apps/vakers/src/styles.scss",
+              "./node_modules/flexboxgrid/dist/flexboxgrid.min.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -75,16 +81,25 @@
               "apps/vakers/tsconfig.spec.json",
               "apps/vakers/tsconfig.editor.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/vakers/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/vakers/**/*"
+            ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/vakers"],
+          "outputs": [
+            "coverage/apps/vakers"
+          ],
           "options": {
             "jestConfig": "apps/vakers/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -109,15 +124,21 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/vakers-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/vakers-e2e/**/*"]
+            "tsConfig": [
+              "apps/vakers-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/vakers-e2e/**/*"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "06ca0440-3422-4d40-a73d-3251076f6dba"
   },
   "schematics": {
     "@nrwl/workspace": {

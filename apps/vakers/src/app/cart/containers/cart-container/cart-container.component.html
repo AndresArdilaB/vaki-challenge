@@ -1,0 +1,26 @@
+<div *ngIf="(cartItems$ | async) as cartItems">
+  <h1>
+    Carrito de compras.
+  </h1>
+  <div *ngFor="let item of cartItems">
+    <vaki-challenge-cart-item [cartItem]="item"></vaki-challenge-cart-item>
+  </div>
+
+  <div class="empty_car" *ngIf="cartItems.length === 0">
+    Aun no has seleccionado ninguna recompensa
+  </div>
+
+  <div class="total_container" *ngIf="cartItems.length > 0">
+    <div>
+      Total: {{cartTotal | currency}}
+    </div>
+    <div>
+      <div *ngIf="loading" class="loading_container">
+        <mat-spinner diameter="40" color="primmary"></mat-spinner>
+      </div>
+      <button *ngIf="!loading" mat-flat-button color="primary" [disabled]="cartTotal === 0" (click)="completeBuy()">
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<h2 class="rewards_title">
+  Recompensas:
+</h2>
+
+<div *ngIf="(rewards$ | async) as rewards" class="list_container">
+  <div *ngFor="let reward of rewards">
+    <vaki-challenge-reward [reward]="reward">
+    </vaki-challenge-reward>
+  </div>
+</div>

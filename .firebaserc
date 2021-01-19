@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "vakers-37e37": {
+      "hosting": {
+        "vakers": [
+          "vakers-37e37"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "vakers-37e37"
+  }
+}

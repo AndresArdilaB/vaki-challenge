@@ -1,0 +1,150 @@
+$mat-vaki-theme-primary: (
+  50: #f1f8e8,
+  100: #ddeec5,
+  200: #c6e39f,
+  300: #afd779,
+  400: #9ecf5c,
+  500: #8dc63f,
+  600: #85c039,
+  700: #7ab931,
+  800: #70b129,
+  900: #5da41b,
+  A100: #ebffdb,
+  A200: #cfffa8,
+  A400: #b3ff75,
+  A700: #a5ff5c,
+  A800: #7ed321,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #000,
+    500: #000,
+    600: #000,
+    700: #000,
+    800: #000,
+    900: #fff,
+    A100: #000,
+    A200: #000,
+    A400: #000,
+    A700: #000,
+  ),
+);
+
+$mat-vaki-theme-accent: (
+  50: #e6e6e6,
+  100: #bfbfbf,
+  200: #959595,
+  300: #6b6b6b,
+  400: #4b4b4b,
+  500: #2b2b2b,
+  600: #262626,
+  700: #202020,
+  800: #1a1a1a,
+  900: #101010,
+  A100: #ee6969,
+  A200: #e93b3b,
+  A400: #f10000,
+  A700: #d80000,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #fff,
+    400: #fff,
+    500: #fff,
+    600: #fff,
+    700: #fff,
+    800: #fff,
+    900: #fff,
+    A100: #000,
+    A200: #fff,
+    A400: #fff,
+    A700: #fff,
+  ),
+);
+
+$vaki-status-colors: (
+  "light": #c4c4c4,
+  "purple": #7660ff,
+  "yellow": #ffdb43,
+  "red": #eb5757,
+  "green": #27ae60,
+  "light-blue": #56ccf2,
+  "blue": #2f80ed,
+  "orange": #f2994a,
+  "light-green": #6fcf97,
+  "light-purple": #7f22fd,
+  "dark": #21293a,
+);
+
+$vaki-primary: (
+  100: #8cc640,
+  10: rgba(#8cc640, 0.1),
+  20: rgba(#8cc640, 0.2),
+  30: rgba(#8cc640, 0.3),
+  40: rgba(#8cc640, 0.4),
+  50: rgba(#8cc640, 0.5),
+  60: rgba(#8cc640, 0.6),
+  70: rgba(#8cc640, 0.7),
+  80: rgba(#8cc640, 0.8),
+  90: rgba(#8cc640, 0.9),
+);
+
+$vaki-black: (
+  100: #2b2b2b,
+  5: #f9f9fa,
+  10: #f2f3f2,
+  20: #e0e0e0,
+  40: #d8d8d8,
+  60: #8d8d8d,
+  80: #4f4f4f,
+);
+
+$vaki-white: #fff;
+$vaki-accent-text: map-get($vaki-primary, 100);
+$vaki-text: map-get($vaki-black, 100);
+$vaki-background: map-get($vaki-black, 10);
+
+$vaki-mat-primary: (
+  main: #8cc640,
+  lighter: #f4f9ec,
+  darker: #8cc640,
+  200: #8cc640,
+  // For slide toggle,
+  contrast:
+    (
+      main: $vaki-white,
+      lighter: $vaki-text,
+      darker: $vaki-white,
+    ),
+);
+
+$vaki-mat-accent: (
+  main: #2b2b2b,
+  lighter: #f9f9fa,
+  darker: #2b2b2b,
+  200: #d8d8d8,
+  // For slide toggle,
+  contrast:
+    (
+      main: $vaki-white,
+      lighter: $vaki-accent-text,
+      darker: $vaki-white,
+    ),
+);
+
+$vaki-mat-warn: (
+  main: #eb5757,
+  lighter: #f9cdcd,
+  darker: #eb5757,
+  200: #eb5757,
+  // For slide toggle,
+  contrast:
+    (
+      main: $vaki-white,
+      lighter: $vaki-text,
+      darker: $vaki-white,
+    ),
+);

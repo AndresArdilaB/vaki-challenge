@@ -1,0 +1,32 @@
+<div class="cart_item_container flex-display">
+  <div class="img_container">
+    <img [src]="cartItem.img" width="50px">
+  </div>
+  <div class="title flex-display">
+    {{cartItem.title}}
+  </div>
+  <div class="value flex-display">
+    {{cartItem.value | currency}}
+  </div>
+  <div class="quantity flex-display">
+    {{cartItem.quantity}}
+  </div>
+  <div class="buttons">
+    <button mat-icon-button color="primary" id="increase" [disabled]="cartItem.available === 0"
+      (click)="increaseOrDecreaseItem(true)">
+      <mat-icon>add_circle</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" id="decrease" [disabled]="cartItem.quantity === 1"
+      (click)="increaseOrDecreaseItem(false)">
+      <mat-icon>remove_circle</mat-icon>
+    </button>
+  </div>
+  <div class="total flex-display">
+    {{cartItem.quantity * cartItem.value | currency}}
+  </div>
+  <div class="delete flex-display">
+    <button mat-icon-button (click)="deleteItem()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>

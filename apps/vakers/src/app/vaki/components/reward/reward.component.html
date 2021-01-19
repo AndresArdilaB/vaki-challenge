@@ -1,0 +1,16 @@
+<mat-card  class="reward_container">
+  <div class="reward_header row between-xs middle-xs header-row">
+    <h3 class="reward_title">
+      {{reward.title}}
+    </h3>
+    <div>
+      <img [src]="reward.img" width="50" alt="">
+    </div>
+  </div>
+  <div>
+    {{reward.description}}
+  </div>
+  <button mat-raised-button class="add_to_cart_button" [disabled]="notAvailable" (click)="addToCart()">
+    {{reward.value | currency}}
+  </button>
+</mat-card>
